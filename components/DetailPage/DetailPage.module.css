@@ -1,5 +1,9 @@
 .detailContainer {
-  display: flex;
+  max-width: 90em;
+  margin: 3em auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3em;
 }
 
 .posterContainer {
@@ -9,6 +13,7 @@
 .movieContainer {
   display: flex;
   flex-direction: column;
+  row-gap: 2em;
   margin: 1em auto;
 }
 
@@ -21,15 +26,17 @@
 }
 
 .movieContainer .genericInfo {
-  margin: 1em 0;
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
   column-gap: 1em;
+  row-gap: 1em;
 }
 
 .movieContainer .genericInfo h6 {
   margin: 0;
-  padding: 0.75em;
+  padding: 0.5em;
   font-size: 0.875rem;
   font-style: normal;
   font-weight: normal;
@@ -61,10 +68,6 @@
   font-weight: 500;
 }
 
-.overviewContainer {
-  margin-top: 2em;
-}
-
 .overviewContainer h3 {
   margin: 0;
   font-size: 1.125rem;
@@ -75,4 +78,37 @@
   margin: 0.5em 0 0 0;
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.creditsContainer,
+.castContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  column-gap: 2em;
+  row-gap: 2em;
+}
+
+.creditsItem,
+.castItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.875rem;
+}
+
+.creditsItem strong,
+.castItem strong {
+  font-weight: 600;
+}
+
+.creditsItem p,
+.castItem p {
+  margin: 0;
+}
+
+.divider {
+  margin: 0;
+  border: 0.1em solid #d9d7c6;
+  border-radius: 0.1em;
 }

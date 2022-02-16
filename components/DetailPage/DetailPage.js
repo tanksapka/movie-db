@@ -31,6 +31,39 @@ export default function DetailPage(props) {
             from his superior officer, Lieutenant Neil Briggs (Hal Holbrook). A man has to know his limitations.
           </p>
         </div>
+        <div className={classes.creditsContainer}>
+          <div className={classes.creditsItem}>
+            <strong>Ted Post</strong>
+            <p>Director</p>
+          </div>
+          <div className={classes.creditsItem}>
+            <strong>Harry Julian Fink</strong>
+            <p>Writer</p>
+          </div>
+          <div className={classes.creditsItem}>
+            <strong>Rita M. Fink</strong>
+            <p>Writer</p>
+          </div>
+        </div>
+        <hr className={classes.divider} />
+        <div className={classes.castContainer}>
+          <div className={classes.castItem}>
+            <strong>Clint Eastwood</strong>
+            <p>Harry Calahan</p>
+          </div>
+          <div className={classes.castItem}>
+            <strong>Hal Holbrook</strong>
+            <p>Lt. Briggs</p>
+          </div>
+          <div className={classes.castItem}>
+            <strong>Mitchell Ryan</strong>
+            <p>McCoy</p>
+          </div>
+          <div className={classes.castItem}>
+            <strong>David Soul</strong>
+            <p>Davis</p>
+          </div>
+        </div>
       </section>
     </main>
   );
