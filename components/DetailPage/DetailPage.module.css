@@ -17,12 +17,17 @@
   margin: 1em auto;
 }
 
-.movieContainer h1 {
+.movieContainer .titleContainer h1 {
   margin: 0;
   font-family: "Playfair Display", serif;
   font-weight: bold;
   font-size: 4.25rem;
   line-height: 5.625rem;
+}
+
+.movieContainer .titleContainer h2 {
+  margin: 0;
+  line-height: 3rem;
 }
 
 .movieContainer .genericInfo {
@@ -84,6 +89,7 @@
 .castContainer {
   display: flex;
   flex-wrap: wrap;
+  align-items: baseline;
   justify-content: flex-start;
   column-gap: 2em;
   row-gap: 2em;
@@ -91,20 +97,27 @@
 
 .creditsItem,
 .castItem {
+  width: 10em;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: 0.875rem;
 }
 
+.castItem .imgContainer {
+  display: block;
+}
+
 .creditsItem strong,
 .castItem strong {
   font-weight: 600;
+  text-align: center;
 }
 
 .creditsItem p,
 .castItem p {
   margin: 0;
+  text-align: center;
 }
 
 .divider {
