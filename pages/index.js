@@ -1,9 +1,11 @@
 import { Fragment } from "react";
 import TileContainer from "../components/TileContainer/TileContainer";
+import Search from "../components/Search/Search";
 
 export default function Home(props) {
   return (
     <Fragment>
+      <Search />
       <TileContainer {...props} />
     </Fragment>
   );

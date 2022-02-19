@@ -25,7 +25,7 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
   const titleId = context.params.titleId;
 
-  const response = await fetch(`https://imdb-api.com/en/API/Title/${process.env.REACT_APP_API_KEY}/${titleId}`);
+  const response = await fetch(`https://imdb-api.com/en/API/Title/${process.env.REACT_APP_API_KEY}/${titleId}/Trailer`);
   const data = await response.json();
 
   return {

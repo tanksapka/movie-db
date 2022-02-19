@@ -50,6 +50,10 @@
   border-radius: 0.625em;
 }
 
+.movieContainer .genericInfo h6 a {
+  color: #d30000;
+}
+
 .imdbInfo {
   display: flex;
   align-items: center;

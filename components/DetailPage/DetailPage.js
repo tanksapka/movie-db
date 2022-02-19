@@ -9,9 +9,23 @@ export default function DetailPage({
   runtimeStr,
   plot,
   imDbRating,
+  trailer: { videoTitle: videoTitle, link: trailerLink },
   tagline,
   ...otherProps
 }) {
+  console.log(
+    id,
+    title,
+    image,
+    releaseDate,
+    runtimeStr,
+    plot,
+    imDbRating,
+    videoTitle,
+    trailerLink,
+    tagline,
+    otherProps
+  );
   const rlsItems = releaseDate.split("-");
   const genreStr = otherProps.genreList.map((item) => item.value).join(", ");
   const directorItems = otherProps.directorList.map((person) => {
@@ -66,10 +80,17 @@ export default function DetailPage({
           {rlsItems && <h6>{`${rlsItems[1]}/${rlsItems[2]}/${rlsItems[0]}`}</h6>}
           {genreStr && <h6>{genreStr}</h6>}
           {runtimeStr && <h6>{runtimeStr}</h6>}
+          {trailerLink && (
+            <h6>
+              <a href={trailerLink} target="_blank" title={videoTitle}>
+                Tailer
+              </a>
+            </h6>
+          )}
         </div>
         <div className={classes.imdbInfo}>
           <Image src="/imdb-icon.svg" alt="IMDb logo" width={64} height={32} />
-          <div className={classes.imdbScore}>{imDbRating ? <span>{imDbRating}</span> / 10 : "N/A"}</div>
+          <div className={classes.imdbScore}>{imDbRating ? <span>{imDbRating}</span> : "N/A"} / 10</div>
         </div>
         <div className={classes.overviewContainer}>
           <h3>Overview</h3>
