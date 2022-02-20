@@ -1,0 +1,13 @@
+.trendingMoviesContainer {
+  margin: 0 auto;
+  max-width: 50em;
+}
+
+.trendingMoviesContainer h2 {
+  letter-spacing: 0.1rem;
+}
+
+.trendingMoviesContainer div {
+  max-height: 40em;
+  overflow-y: auto;
+}

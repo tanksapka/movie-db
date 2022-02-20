@@ -13,19 +13,6 @@ export default function DetailPage({
   tagline,
   ...otherProps
 }) {
-  console.log(
-    id,
-    title,
-    image,
-    releaseDate,
-    runtimeStr,
-    plot,
-    imDbRating,
-    videoTitle,
-    trailerLink,
-    tagline,
-    otherProps
-  );
   const rlsItems = releaseDate.split("-");
   const genreStr = otherProps.genreList.map((item) => item.value).join(", ");
   const directorItems = otherProps.directorList.map((person) => {

@@ -1,0 +1,8 @@
+.searchResultsContainer h2 span {
+  font-style: italic;
+}
+
+.searchResultsContainer div {
+  max-height: 40em;
+  overflow-y: auto;
+}

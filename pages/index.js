@@ -1,12 +1,12 @@
 import { Fragment } from "react";
-import TileContainer from "../components/TileContainer/TileContainer";
-import Search from "../components/Search/Search";
+import TrendingMovies from "../components/TrendingMovies/TrendingMovies";
+import SearchArea from "../components/SearchArea/SearchArea";
 
 export default function Home(props) {
   return (
     <Fragment>
-      <Search />
-      <TileContainer {...props} />
+      <SearchArea />
+      <TrendingMovies {...props} />
     </Fragment>
   );
 }
