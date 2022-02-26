@@ -1,3 +1,4 @@
+@import "config";
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&family=Roboto:ital,wght@0,500;1,400&display=swap");
 
 html {
@@ -12,8 +13,8 @@ body {
   font-size: 1rem;
   font-weight: normal;
   line-height: 1.5rem;
-  background-color: #f9f7e8;
-  color: #1b1d1c;
+  background-color: $background-color;
+  color: $font-color;
 }
 
 * {

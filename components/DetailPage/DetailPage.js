@@ -1,4 +1,4 @@
-import classes from "./DetailPage.module.css";
+import classes from "./DetailPage.module.scss";
 import Image from "next/image";
 
 export default function DetailPage({
@@ -61,7 +61,7 @@ export default function DetailPage({
       <section className={classes.movieContainer}>
         <div className={classes.titleContainer}>
           <h1>{title}</h1>
-          <h2>&mdash; {tagline}</h2>
+          {tagline && tagline !== "-" && <h2>&mdash; {tagline}</h2>}
         </div>
         <div className={classes.genericInfo}>
           {rlsItems && <h6>{`${rlsItems[1]}/${rlsItems[2]}/${rlsItems[0]}`}</h6>}
@@ -69,8 +69,12 @@ export default function DetailPage({
           {runtimeStr && <h6>{runtimeStr}</h6>}
           {trailerLink && (
             <h6>
-              <a href={trailerLink} target="_blank" title={videoTitle}>
-                Tailer
+              <a href={trailerLink} target="_blank" rel="noreferrer" title={videoTitle}>
+                {/* <Image src="/play.svg" alt="Play icon" width={12} height={12} /> Tailer */}
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                  <path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" />
+                </svg>
+                Trailer
               </a>
             </h6>
           )}

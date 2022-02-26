@@ -1,0 +1,145 @@
+@import "../../styles/config";
+
+.detailContainer {
+  max-width: 90em;
+  margin: 3em auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3em;
+
+  .posterContainer {
+    margin: 1em auto;
+  }
+
+  .movieContainer {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2em;
+    margin: 1em auto;
+
+    .titleContainer {
+      h1 {
+        margin: 0;
+        font-family: "Playfair Display", serif;
+        font-weight: bold;
+        font-size: 4.25rem;
+        line-height: 5.625rem;
+      }
+
+      h2 {
+        margin: 0;
+        line-height: 3rem;
+      }
+    }
+
+    .genericInfo {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: center;
+      column-gap: 1em;
+      row-gap: 1em;
+
+      h6 {
+        margin: 0;
+        padding: 0.5em;
+        font-size: 0.875rem;
+        font-style: normal;
+        font-weight: normal;
+        line-height: 1rem;
+        background: $background-color-accent;
+        border-radius: 0.625em;
+
+        a {
+          color: $link-color;
+          text-decoration: none;
+
+          svg {
+            width: 0.75em;
+            height: 0.75em;
+            margin-right: 0.4em;
+            fill: $link-color;
+          }
+        }
+      }
+    }
+
+    .imdbInfo {
+      display: flex;
+      align-items: center;
+      column-gap: 1em;
+
+      img {
+        width: 4em;
+        height: 2em;
+      }
+
+      .imdbScore {
+        font-family: "Roboto", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: normal;
+
+        span {
+          font-size: 1.5rem;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .overviewContainer {
+      h3 {
+        margin: 0;
+        font-size: 1.125rem;
+        font-weight: 600;
+      }
+
+      p {
+        margin: 0.5em 0 0 0;
+        font-size: 1rem;
+        line-height: 1.5rem;
+      }
+    }
+
+    .creditsContainer,
+    .castContainer {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: flex-start;
+      column-gap: 2em;
+      row-gap: 2em;
+    }
+
+    .creditsItem,
+    .castItem {
+      width: 10em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 0.875rem;
+    }
+
+    .castItem .imgContainer {
+      display: block;
+    }
+
+    .creditsItem strong,
+    .castItem strong {
+      font-weight: 600;
+      text-align: center;
+    }
+
+    .creditsItem p,
+    .castItem p {
+      margin: 0;
+      text-align: center;
+    }
+
+    .divider {
+      margin: 0;
+      border: 0.1em solid #d9d7c6;
+      border-radius: 0.1em;
+    }
+  }
+}
